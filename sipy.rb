@@ -1,11 +1,13 @@
 $TAG = "2021.04.01"
 
 class Sipy < Formula
+  include Language::Python::Virtualenv
   desc "python packages related to scientific work"
   homepage "https://github.com/BardyshBorys/ScienceBundleMacOS"
   url "https://github.com/BardyshBorys/ScienceBundleMacOS"
   head "git@github.com:BardyshBorys/ScienceBundleMacOS.git"
   version "#$TAG"
+  sha256 "54c1f67fb1672908032d060020640f6a1e20057c7c31bb62a3f4791a3fee8cba"
 
   resource "setuptools" do
     url "https://files.pythonhosted.org/packages/1a/04/d6f1159feaccdfc508517dba1929eb93a2854de729fa68da9d5c6b48fa00/setuptools-39.2.0.zip"
