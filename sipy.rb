@@ -53,6 +53,7 @@ class Sipy < Formula
         venv.pip_install resource(r)
       end
       venv.pip_install_and_link buildpath
+      bin.install_symlink libexec/"bin/sipy"
   end
 
 end
