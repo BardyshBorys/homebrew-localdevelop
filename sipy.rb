@@ -48,9 +48,7 @@ class Sipy < Formula
   end
 
   def install
-      libexec.install Dir["bin/*"]
-      bin.write_exec_script (libexec/"bin/sipy.py")
-      bin.write_exec_script ("bin/sipy.py")
+      bin.install "bin/sipy.py" => "sipy"
   end
 
 end
