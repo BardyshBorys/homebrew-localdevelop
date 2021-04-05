@@ -13,11 +13,6 @@ class Sipy < Formula
     sha256 "b2584ea6f16c47fe3795745e9cae5a7762f750aa78c15cbe14736dcd2602b755" => :el_capitan
   end
 
-  devel do
-    url "https://www.python.org/ftp/python/3.7.0/Python-3.7.0rc1.tar.xz"
-    sha256 "c9cfb9b60c23e3ed20e942fdeee299b27c0b4abd7def9b4a3a78d37e6c0c0bb7"
-  end
-
   head do
     url "https://github.com/python/cpython.git"
 
@@ -76,7 +71,7 @@ class Sipy < Formula
     url "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl"
     sha256 "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
   end
-  
+
   fails_with :clang do
     build 425
     cause "https://bugs.python.org/issue24844"
