@@ -1,4 +1,4 @@
-$TAG = "v.2"
+$TAG = "2"
 
 class Sipy < Formula
   include Language::Python::Virtualenv
