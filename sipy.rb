@@ -48,7 +48,9 @@ class Sipy < Formula
   end
 
   def install
+      system "mv", libexec/"bin/sipy", libexec/"bin/sipy"
       bin.install_symlink libexec/"bin/sipy"
+      prefix.install Dir["*"]
   end
 
 end
