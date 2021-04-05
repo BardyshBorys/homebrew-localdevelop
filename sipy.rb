@@ -44,12 +44,8 @@ class Sipy < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3.9")
-    %w[
-      pandas matplotlib requests
-    ].each do |r|
-      venv.pip_install resource(r)
-    end
-
+    venv.pip_install resources
+    venv.pip_install_and_link buildpath
     ENV.prepend_create_path "PYTHONPATH", Formula["Sipy"].opt_lib/"python3.9/site-packages"
     (bin/"sipy").write_env_script libexec/"bin/sipy", :PYTHONPATH => ENV["PYTHONPATH"]
   end
