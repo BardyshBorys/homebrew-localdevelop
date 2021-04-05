@@ -1,13 +1,15 @@
 $TAG = "2021.04.01"
 
 class Sipy < Formula
-  include Language::Python3::Virtualenv
+  include Language::Python::Virtualenv
   desc "python packages related to scientific work"
   homepage "https://github.com/BardyshBorys/ScienceBundleMacOS"
   url "https://github.com/BardyshBorys/ScienceBundleMacOS"
   head "git@github.com:BardyshBorys/ScienceBundleMacOS.git"
   version "#$TAG"
   sha256 "54c1f67fb1672908032d060020640f6a1e20057c7c31bb62a3f4791a3fee8cba"
+
+  depends_on "python@3.9"
 
   resource "pandas" do
     url "https://files.pythonhosted.org/packages/cf/6a/b662206fd22c2f9bf70793ceb2db99cf45cfaf13f11effdee45f6e5c22e1/pandas-1.2.3-cp37-cp37m-macosx_10_9_x86_64.whl"
@@ -46,7 +48,7 @@ class Sipy < Formula
   end
 
   def install
-      venv = virtualenv_create(libexec)
+      venv = virtualenv_create(libexec, "python3.9")
       %w[six parsedatetime].each do |r|
         venv.pip_install resource(r)
       end
