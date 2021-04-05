@@ -4,11 +4,11 @@ class ScienceBundle < Formula
   include Language::Python::Virtualenv
 
   desc "Simple Science Bundle for local dev"
-  homepage "https://github.com/BardyshBorys/ScienceBundleMacOS"
-  url "https://github.com/BardyshBorys/ScienceBundleMacOS"
+  homepage "https://github.com/BardyshBorys/homebrew-localdevelop"
+  url "https://github.com/BardyshBorys/homebrew-localdevelop"
   license "MIT"
-  head "git@github.com:BardyshBorys/ScienceBundleMacOS.git"
-  version "1.0"
+  head "git@github.com:BardyshBorys/homebrew-localdevelop.git"
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "f576b76fa2209abfa8b0923f378318199af89ddfb4915150243d1d7e73543ac0"
     sha256 cellar: :any_skip_relocation, big_sur:       "24d61894796f80e46465356b2a45a85861789a430019efd07952c108018eaba4"
