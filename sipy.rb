@@ -28,7 +28,7 @@ class Sipy < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec)
+    venv = virtualenv_create(libexec, "python3.9")
     %w[
       pandas matplotlib requests
     ].each do |r|
