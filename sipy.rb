@@ -1,6 +1,7 @@
 $TAG = "2021.04.01"
 
 class Sipy < Formula
+  include Language::Python::Virtualenv
   desc "Simple Science Bundle for local dev"
   homepage "https://github.com/BardyshBorys/homebrew-localdevelop"
   url "https://github.com/BardyshBorys/homebrew-localdevelop"
