@@ -8,7 +8,7 @@ class ScienceBundle < Formula
   url "git@github.com:BardyshBorys/homebrew-localdevelop.git"
   license "MIT"
   head "git@github.com:BardyshBorys/homebrew-localdevelop.git"
-  version "0.1"
+ version "#$TAG"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "f576b76fa2209abfa8b0923f378318199af89ddfb4915150243d1d7e73543ac0"
