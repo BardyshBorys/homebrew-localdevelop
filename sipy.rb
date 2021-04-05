@@ -34,7 +34,7 @@ class Sipy < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, Formula["python@3.9"].opt_bin/"python3")
+    venv = virtualenv_create(libexec/"venv", Formula["python@3.9"].opt_bin/"python3")
     venv.pip_install resources
     venv.pip_install buildpath
 
