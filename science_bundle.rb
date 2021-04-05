@@ -5,7 +5,7 @@ class ScienceBundle < Formula
 
   desc "Simple Science Bundle for local dev"
   homepage "https://github.com/BardyshBorys/homebrew-localdevelop"
-  url "https://github.com/BardyshBorys/homebrew-localdevelop"
+  url "git@github.com:BardyshBorys/homebrew-localdevelop.git"
   license "MIT"
   head "git@github.com:BardyshBorys/homebrew-localdevelop.git"
 
