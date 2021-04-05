@@ -6,6 +6,7 @@ class Sipy < Formula
   url "https://github.com/BardyshBorys/homebrew-localdevelop"
   license "MIT"
   head "git@github.com:BardyshBorys/homebrew-localdevelop.git"
+  sha256 "0678199725ceba9afe8c64f6026acf3d81994c1ff3e480f351b6afbb0ce903c2"
   version "#$TAG"
 
   depends_on "python@3.9"
@@ -31,4 +32,18 @@ class Sipy < Formula
     sha256 "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
   end
 
+  def install
+    venv = virtualenv_create(libexec, Formula["python@3.9"].opt_bin/"python3")
+    venv.pip_install resources
+    venv.pip_install buildpath
+
+    # Make the Homebrew site-packages available in the interpreter environment
+    xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    ENV.prepend_path "PYTHONPATH", HOMEBREW_PREFIX/"lib/python#{xy}/site-packages"
+    ENV.prepend_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+    combined_pythonpath = ENV["PYTHONPATH"] + "${PYTHONPATH:+:}$PYTHONPATH"
+    %w[bpdb bpython].each do |cmd|
+      (bin/cmd).write_env_script libexec/"bin/#{cmd}", PYTHONPATH: combined_pythonpath
+    end
+  end
 end
