@@ -48,7 +48,7 @@ class Sipy < Formula
   end
 
   def install
-      bin.install 'bin/sipy'
+      bin.install 'bin/sipy.py'
       bin.install Dir[libexec/"bin/*"]
       bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
   end
