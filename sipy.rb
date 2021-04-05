@@ -5,7 +5,7 @@ class Sipy < Formula
 
   desc "Simple Science Bundle for local dev"
   homepage "https://github.com/BardyshBorys/homebrew-localdevelop"
-  url "git@github.com:BardyshBorys/homebrew-localdevelop.git"
+  url "https://github.com/BardyshBorys/homebrew-localdevelop"
   license "MIT"
   head "git@github.com:BardyshBorys/homebrew-localdevelop.git"
   version "#$TAG"
