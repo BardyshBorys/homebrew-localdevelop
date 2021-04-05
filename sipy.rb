@@ -1,7 +1,7 @@
 $TAG = "2021.04.01"
 
 class Sipy < Formula
-  include Language::Python::Virtualenv
+  include Language::Python3::Virtualenv
   desc "python packages related to scientific work"
   homepage "https://github.com/BardyshBorys/ScienceBundleMacOS"
   url "https://github.com/BardyshBorys/ScienceBundleMacOS"
