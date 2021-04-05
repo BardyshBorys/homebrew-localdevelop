@@ -1,0 +1,7 @@
+brew "jupyter"
+brew "pkg-config"
+brew "git"
+brew "gcc"
+brew "python@3.9"
+brew "boost --build-from-source"
+brew "tcl-tk"
