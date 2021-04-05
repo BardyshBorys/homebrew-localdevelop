@@ -1,14 +1,21 @@
-$TAG = "2021.04.01"
+$TAG = "2021.04.05"
 
 class Sipy < Formula
   include Language::Python::Virtualenv
   desc "python packages related to scientific work"
   homepage "https://github.com/BardyshBorys/ScienceBundleMacOS"
-  url  "git@github.com:BardyshBorys/ScienceBundleMacOS.git", :using => :git, :branch => "main"
+  url  "git@github.com:BardyshBorys/ScienceBundleMacOS.git", :using => :git, :tag => "$TAG"
   head "git@github.com:BardyshBorys/ScienceBundleMacOS.git"
   version "#$TAG"
   sha256 "54c1f67fb1672908032d060020640f6a1e20057c7c31bb62a3f4791a3fee8cba"
 
+  livecheck do
+    url :stable
+    regex(/^(\d{4}.\d{2}.\d{2})$/i)
+    strategy :git do |tags, regex|
+      tags.map { |tag| tag[regex, 1]&.gsub(/\D/, "") }.compact
+    end
+  end
   depends_on "python@3.9"
 
   fails_with :clang do
