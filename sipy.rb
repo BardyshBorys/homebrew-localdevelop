@@ -62,7 +62,8 @@ class Sipy < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.install resources
+    venv.pip_install resources
+    venv.pip_install_and_link buildpath
     bin.install_symlink libexec/"bin/sipy"
   end
 
