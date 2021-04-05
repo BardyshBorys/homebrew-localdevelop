@@ -1,6 +1,6 @@
 $TAG = "2021.04.01"
 
-class ScienceBundle < Formula
+class science_bundle < Formula
   include Language::Python::Virtualenv
 
   desc "Simple Science Bundle for local dev"
