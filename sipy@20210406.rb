@@ -12,7 +12,7 @@ class SipyAT20210406 < Formula
     url "https://github.com/BardyshBorys/ScienceBundleMacOS/tags"
     regex(/^(\d{4}.\d{2}.\d{2})$/i)
     strategy :git do |tags, regex|
-      tags.map { |tag| tag[regex, 1]&.gsub(/\D/, "") }.compact
+      tags.map { |tag| tag }.compact
     end
   end
   depends_on "python@3.9"
