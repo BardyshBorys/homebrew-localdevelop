@@ -11,8 +11,6 @@ class Sipy < Formula
     url "https://github.com/BardyshBorys/homebrew-localdevelop/tags"
     regex(/^(\d{4}.\d{2}.\d{2})$/i)
     strategy :git do |tags, regex|
-      system "echo", tags
-      system "echo", regex
       tags.map { |tag| tag[regex, 1]&.gsub(/\D/, "") }.compact
     end
   end
