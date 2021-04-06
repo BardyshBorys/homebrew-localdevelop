@@ -4,8 +4,8 @@ class SipyAT20210406 < Formula
   include Language::Python::Virtualenv
   desc "python packages related to scientific work"
   homepage "https://github.com/BardyshBorys/ScienceBundleMacOS"
-  url  "git@github.com:BardyshBorys/ScienceBundleMacOS.git", :using => :git, :branch => "main", :tag => "$TAG"
-  head  "git@github.com:BardyshBorys/ScienceBundleMacOS.git", :using => :git, :branch => "main", :tag => "$TAG"
+  url  "git@github.com:BardyshBorys/ScienceBundleMacOS.git", :using => :git, :tag => "$TAG"
+  head  "git@github.com:BardyshBorys/ScienceBundleMacOS.git", :using => :git, :branch => "main"
   version "$TAG"
   sha256 "54c1f67fb1672908032d060020640f6a1e20057c7c31bb62a3f4791a3fee8cba"
 
