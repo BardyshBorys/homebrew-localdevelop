@@ -8,7 +8,7 @@ class Sipy < Formula
   sha256 "54c1f67fb1672908032d060020640f6a1e20057c7c31bb62a3f4791a3fee8cba"
 
   livecheck do
-    url "git@github.com:BardyshBorys/ScienceBundleMacOS.git"
+    url "https://github.com/BardyshBorys/homebrew-localdevelop/tags"
     regex(/^(\d{4}.\d{2}.\d{2})$/i)
     strategy :git do |tags, regex|
       system "echo", tags
