@@ -35,8 +35,7 @@ class SipyAT20210407 < Formula
   end
 
   def install
-      rm "/usr/local/bin/sipy"
-      bin.install "bin/sipy.py" => "sipy"
+      prefix.install "bin/sipy.py" => "sipy"
   end
 
 end
