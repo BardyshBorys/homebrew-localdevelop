@@ -11,8 +11,8 @@ class Sipy < Formula
     url "git@github.com:BardyshBorys/ScienceBundleMacOS.git"
     regex(/^(\d{4}.\d{2}.\d{2})$/i)
     strategy :git do |tags, regex|
-      print tags
-      print regex
+      system "echo", tags
+      system "echo", regex
       tags.map { |tag| tag[regex, 1]&.gsub(/\D/, "") }.compact
     end
   end
