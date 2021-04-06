@@ -35,7 +35,8 @@ class Sipy < Formula
   end
 
   def install
-      bin.install_symlink "bin/sipy.py", :force => true
+      libexec.install "bin/sipy.py" => "sipy"
+      bin.install_symlink libexec/"sipy", :force => true
   end
 
 end
