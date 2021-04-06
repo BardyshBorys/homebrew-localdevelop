@@ -35,7 +35,8 @@ class SipyAT20210407 < Formula
   end
 
   def install
-      prefix.install "bin/sipy.py" => "sipy"
+      prefix.install "bin/sipy.py" => libexec/"sipy"
+      bin.install_symlink libexec/"sipy"
   end
 
 end
