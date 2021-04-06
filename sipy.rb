@@ -35,7 +35,7 @@ class Sipy < Formula
   end
 
   def install
-      rm bin/"sipy"
+      rm "/usr/local/bin/sipy"
       bin.install "bin/sipy.py" => "sipy"
   end
 
