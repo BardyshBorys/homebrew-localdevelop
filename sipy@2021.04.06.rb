@@ -1,4 +1,4 @@
-$TAG = "stable"
+$TAG = "2021.04.06"
 
 class Sipy < Formula
   include Language::Python::Virtualenv
