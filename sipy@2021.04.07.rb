@@ -35,7 +35,7 @@ class SipyAT20210407 < Formula
   end
 
   def install
-      bin.install "bin/sipy.py" => "sipy", :force => true
+      bin.install_symlink "bin/sipy.py", :force => true
   end
 
 end
