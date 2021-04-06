@@ -1,6 +1,6 @@
 $TAG = "2021.04.06"
 
-class Sipy < Formula
+class SipyAT20210406 < Formula
   include Language::Python::Virtualenv
   desc "python packages related to scientific work"
   homepage "https://github.com/BardyshBorys/ScienceBundleMacOS"
