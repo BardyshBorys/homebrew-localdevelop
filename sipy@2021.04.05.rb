@@ -35,6 +35,7 @@ class SipyAT20210405 < Formula
   end
 
   def install
+      rm "sipy"
       bin.install "bin/sipy.py" => "sipy"
   end
 
